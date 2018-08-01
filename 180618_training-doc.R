@@ -144,7 +144,7 @@ swfc_rename<- swfc %>%  # take the dataset and...
 
 names(swfc_rename)  # look at the column names to check
 
-# select() function ----
+# 2. select() function ----
 # To specify the columns we want to retain; all others are dropped
 
 swfc_select_1 <- swfc %>%
@@ -153,7 +153,7 @@ swfc_select_1 <- swfc %>%
 swfc_select_2 <- swfc %>%
   select(-urn, -school_name, -school_type)  # what does this do?
 
-# 2. filter() function ----
+# 3. filter() function ----
 # To specify the rows you want to keep based on some conditions
 # '==' means 'equals' because a single equals marks is used for argument
 # specifying the arguments in your function.
@@ -169,7 +169,7 @@ swfc_filter_4 <- swfc %>%
   filter(la_number %in% c(202, 203, 204) & school_type == "Free Schools")  # ?
 
 
-# 3. mutate() function ----
+# 4. mutate() function ----
 # To create new columns
 
 swfc_mutate_1 <- swfc %>%
@@ -183,7 +183,7 @@ swfc_mutate_2 <- swfc %>%
   )
 )
 
-# 4. *_join() function ----
+# 5. *_join() function ----
 # Merge data from another dataset given a matching key
 # The dataset is available from bit.ly/swfc_headcount
 
@@ -201,7 +201,7 @@ swfc_fte_join <- swfc %>%
 
 glimpse(swfc_fte_join)  # check our join has worked
 
-# 5. Piping with multiple functions ----
+# 6. Piping with multiple functions ----
 # Can you explain what's happening here?
 
 swfc %>%
@@ -213,7 +213,7 @@ swfc %>%
   arrange(teacher_ta_ratio)
 
 
-# 6. group_by() and summarise() functions ----
+# 7. group_by() and summarise() functions ----
 # Perform operations within specified groups (a bit like VLOOKUP in Excel)
 # Example: which LA/school-type combination has the highest mean number of
 # teachers?
