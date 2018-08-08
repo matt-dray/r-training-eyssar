@@ -72,6 +72,7 @@ my_list <- list(
 
 class(my_list)
 
+
 # Load packages -----------------------------------------------------------
 
 
@@ -147,7 +148,6 @@ View(swfc)
 
 head(swfc)  # see ?head to find out how to override the default 6 rows
 tail(swfc)
-
 
 
 # Manipulating data -------------------------------------------------------
@@ -462,7 +462,9 @@ swfc_bar_3 <- swfc_bar_2 +  # take the plot object and add more layers
 
 swfc_bar_3
 
+
 # 4. Scatter example ----
+
 
 # And let's do a scatter with conditional colouring of the points
 
@@ -511,7 +513,7 @@ plot +
   )
 
 
-# 5. Save the plot
+# 5. Save the plot ----
 
 
 # What a beautiful plot! Let's save it somewhere sensible for posterity.
